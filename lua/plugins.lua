@@ -51,6 +51,39 @@ return require('packer').startup(function(use)
         -- mason mason-lspconfig: LSP
         use { 'williamboman/mason.nvim' }
         use { 'williamboman/mason-lspconfig.nvim'}
+
+        -- bufferline: vscode style tabs
+        use {
+            'akinsho/bufferline.nvim', 
+            requires = { 'kyazdani42/nvim-web-devicons', "moll/vim-bbye", 'famiu/bufdelete.nvim'},
+            config = [[require('config.bufferline')]]
+        }
+    
+        -- nvim-tree: file explorer
+        use {
+          'nvim-tree/nvim-tree.lua',
+          requires = {
+            'nvim-tree/nvim-web-devicons', -- optional 
+          },
+          config = [[require('config.nvim-tree')]]
+        }
+
+        -- Comment: batch comment and uncomment
+        use {
+            'numToStr/Comment.nvim',
+            config = function()
+                require('Comment').setup()
+            end
+        }
+
+        -- pears: auto pair 
+        use {
+            "steelsojka/pears.nvim",
+            config = function()
+                require('pears').setup()
+            end
+        }
+
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if packer_bootstrap then

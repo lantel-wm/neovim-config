@@ -27,6 +27,21 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 -----------------
 
 -- Hint: start visual mode with the same area as the previous area and the same mode
-vim.keymap.set('v', '<', '<gv', opts)
-vim.keymap.set('v', '>', '>gv', opts)
+vim.keymap.set('v', '<C-[>', '<gv', opts)
+vim.keymap.set('v', '<C-]>', '>gv', opts)
 
+-----------------
+-- Plugin maps --
+-----------------
+
+-- nvim-tree
+vim.keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set('n', '<C-m>', ':NvimTreeFocus<CR>', opts)
+
+-- bufferline
+vim.keymap.set('n', "<A-h>", ":BufferLineCyclePrev<CR>", opts)
+vim.keymap.set('n', "<A-l>", ":BufferLineCycleNext<CR>", opts)
+vim.keymap.set('n', "<C-w>", ":BufferLineCycleNext<CR>", opts)
+
+-- toggleterm
+vim.keymap.set('n', "<C-`>", ":ToggleTerm<CR>", opts)

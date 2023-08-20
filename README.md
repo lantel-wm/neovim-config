@@ -1,19 +1,18 @@
-# usage
-
-Neovim version: 
-~~~
+# Neovim version
+~~
 NVIM v0.9.1
 Build type: Release
 LuaJIT 2.1.0-beta3
-~~~
+~~
 
-~~~
+# Usage
+~~
 git clone https://github.com/ZZY000926/neovim-config.git ~/.config/nvim
-~~~
+~~
 
-# direcotry structure
+# Direcotry structure
 
-~~~
+~~
 ~/.config/nvim
 ├── init.lua
 ├── lua
@@ -27,5 +26,8 @@ git clone https://github.com/ZZY000926/neovim-config.git ~/.config/nvim
 ├── plugin
 │   └── packer_compiled.lua
 └── README.md
-
-~~~
+~~
+
+# Reference
+https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/
+
